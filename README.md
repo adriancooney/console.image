@@ -29,7 +29,7 @@ Examples:
 #### It even supports [gifs](http://i.imgur.com/CB8tU.gif).
 
 ## How it works
-Console.image works by hooking into the ability to CSS style console.log messages in the form of `console.log("%c[message]", [style rules]). It sets the `background-image` and changes the `font-size` to the size of the background and changes the `color` to transparent. It isn't all fairies and fuck ponies, however. When you set the image to the background, unless you have the dimensions on the font exactly correct you see an image repeating even with `no-repeat` set. This we can't have. After delving into the Web Inspector source, I found the problematic code:
+Console.image works by hooking into the ability to style console.log messages in the form of `console.log("%c[message]", [style rules]). It sets the `background-image` and changes the `color` to transparent. It isn't all fairies and fucking ponies, however. When you set the image to the background, unless you have the dimensions on the font exactly correct you see an image repeating even with `no-repeat` set. This we can't have. After delving into the Web Inspector source, I found the problematic code:
 
 	var currentStyle = null;
 	function styleFormatter(obj)
@@ -55,7 +55,7 @@ Console.image works by hooking into the ability to CSS style console.log message
 		}
 	}
 
-The code above formats the inputted style. We can see the the inspector takes the inputted style and test's on a buffer element to validate them. It then takes the validated styles and checks to see if they're whitelisted, if they pass, they're put in the `currentStyle` object. As you can see, this shatters any dreams of setting widths, heights or animations. Bastards but entirely understandable. This method creates a problem with the `background-repeat` property which will be explained after you take a gawk at the code below.
+The code above formats the inputted style. We can see the the inspector takes the inputted style and tests it on a buffer element to validate them. It then takes the validated styles and checks to see if they're whitelisted, if they pass, they're put in the `currentStyle` object. As you can see, this shatters any dreams of setting widths, heights or animations. Bastards but entirely understandable. Unfortunately this method creates a problem with the `background-repeat` property which will be explained after you take a gawk at the code below.
 
 	function append(a, b)
 	{
@@ -74,9 +74,9 @@ The code above formats the inputted style. We can see the the inspector takes th
 		return a;
 	}
 
-This snippet appends the styled message into the parent console message. As you can see, it loops over the `currentStyle` object and sets any style within it to the `wrapper`'s style. What's the problem? Javascript for some reason return's `background-repeat-x` and `background-repeat-y` for the `background repeat` property. These properties have no effect when they are set on the wrapper and thus the `background-repeat` style is lost in translation. So now, the solution as to use the whitelisted properties *only* and make the image no-repeat. Fuck.
+This snippet appends the styled message into the parent console message. As you can see, it loops over the `currentStyle` object and sets any style within it to the `wrapper`'s style. What's the problem? The browser for some reason returns `background-repeat-x` and `background-repeat-y` for the `background repeat` property. These properties have no effect when they are _set_ on the wrapper and thus the `background-repeat` style is lost in translation. So now, I had to find a solution where only the whitelisted properties are used but in the it was fairly simple.
 
-To fix this, I used the `padding`, `line-height` and `font-size` properties. I set the padding on the left and right to half the width and the top and bottom to the half the height. I then set the font-size to `1px` to make it negligible in the width difference. Since padding on an inline element has no effect on it's dimensions, I used the `line-height` to manually set the height.
+I used the `padding`, `line-height` and `font-size` properties. I set the padding on the left and right to half the width and the top and bottom to the half the height of the image. I then set the font-size to `1px` to ensure it doesn't distort the width. Since padding on an inline element has no effect on it's dimensions, I used the `line-height` to manually set the height and that displayed the images.
 
 ## Meme Types
 * "10 Guy"
