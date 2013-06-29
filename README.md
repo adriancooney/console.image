@@ -1,6 +1,6 @@
 # console.image
 ### The one thing Chrome Dev Tools didn't need.
-The day has come when you have the ability to put images in the console. Checkout [here for a demo](http://dunxrion.github.io/console.image) and open up the dev tools.
+The day has come when you have the ability to put images in the console. Checkout [here for a demo](http://dunxrion.github.io/console.image) and open up the dev tools. Also, check out the awesome [chrome extension](https://github.com/jffry/console.image-chrome-extension) by [@jffry](https://twitter.com/jffry).
 
 ![Images.. in the console?](http://i.imgur.com/hv6pwkb.png)
 
@@ -194,3 +194,5 @@ I used the `padding`, `line-height` and `font-size` properties. I set the paddin
 * "Yo Dawg Xzibit"
 * "You're Bad And You Should Feel Bad"
 * "You're Gonna Have A Bad Time"
+
+LICENSE: WTFPL
