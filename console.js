@@ -22,7 +22,7 @@
 	 */
 	function getBox(width, height) {
 		return {
-			string: "■",
+			string: ".",
 			style: "font-size: 1px; padding: " + (Math.floor(height/2) - 1) + "px " + (Math.floor(width/2) - 1) + "px; line-height: " + height + "px;"
 		}
 	}
@@ -139,7 +139,7 @@
 			ctx.scale(width/500, height/500);
 
 			//Draw the background
-			ctx.drawImage(this, 0, 0, _w, _w);
+			ctx.drawImage(this, 0, 0, _w, _h);
 
 			drawMemeText(ctx, "upper", upper, _w, 50); //upper
 			drawMemeText(ctx, "lower", lower, _w, _h - 50); //upper
