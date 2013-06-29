@@ -82,7 +82,7 @@ function append(a, b)
 }
 ```
 
-This snippet appends the styled message into the parent console message. As you can see, it loops over the `currentStyle` object and sets any style within it to the `wrapper`'s style. What's the problem? The browser for some reason returns `background-repeat-x` and `background-repeat-y` for the `background repeat` property. These properties have no effect when they are _set_ on the wrapper and thus the `background-repeat` style is lost in translation. So now, I had to find a solution where only the whitelisted properties are used but in the it was fairly simple.
+This snippet appends the styled message into the parent console message. As you can see, it loops over the `currentStyle` object and sets any style within it to the `wrapper`'s style. What's the problem? The browser for some reason returns `background-repeat-x` and `background-repeat-y` for the `background repeat` property. These properties have no effect when they are _set_ on the wrapper and thus the `background-repeat` style is lost in translation. So now, I had to find a solution where only the whitelisted properties are used but in the end it was fairly simple.
 
 I used the `padding`, `line-height` and `font-size` properties. I set the padding on the left and right to half the width and the top and bottom to the half the height of the image. I then set the font-size to `1px` to ensure it doesn't distort the width. Since padding on an inline element has no effect on it's dimensions, I used the `line-height` to manually set the height and that displayed the images.
 
