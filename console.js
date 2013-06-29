@@ -129,7 +129,7 @@
 			_w = 500, _h = 500; 
 
 		var img = new Image();
-    	img.setAttribute('crossOrigin','anonymous');
+    		img.setAttribute('crossOrigin','anonymous');
 		img.onload = function() {
 			canvas.width = width;
 			canvas.height = height;
