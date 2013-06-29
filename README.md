@@ -1,6 +1,6 @@
 # console.image
 ### The one thing Chrome Dev Tools didn't need.
-The day has come when you have the ability to put images in the console. 
+The day has come when you have the ability to put images in the console. Checkout [here for a demo](http://dunxrion.github.io/console.image) and open up the dev tools.
 
 ![Images.. in the console?](http://i.imgur.com/hv6pwkb.png)
 

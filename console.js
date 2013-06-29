@@ -1,6 +1,6 @@
 /**
  * Dubiously created by Adrian Cooney
- * http://dunxrion.github.com
+ * http://dunxrion.github.io
  */
 
 (function(console) {
