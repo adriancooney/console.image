@@ -168,6 +168,5 @@
 		};
 
 		img.src = url;
-		img.style.background = "url(" + url + ")"; //Preload it again..
 	};
 })(console);
