@@ -1,6 +1,6 @@
 # console.image
 ### The one thing Chrome Dev Tools didn't need.
-The day has come when you have the ability to put images in the console. Checkout [here for a demo](http://dunxrion.github.io/console.image) and open up the dev tools. Also, check out the awesome [chrome extension](https://github.com/jffry/console.image-chrome-extension) by [@jffry](https://twitter.com/jffry). Console.image now has a little baby sister, __[console.snapshot]__. It snapshots the canvas and outputs it to the console to make debugging the canvas a little less dramatic.
+The day has come when you have the ability to put images in the console. Checkout [here for a demo](http://dunxrion.github.io/console.image) and open up the dev tools. Also, check out the awesome [chrome extension](https://github.com/jffry/console.image-chrome-extension) by [@jffry](https://twitter.com/jffry). Console.image now has a little baby sister, __[console.snapshot](http://dunxrion.github.io/console.snapshot)__. It snapshots the canvas and outputs it to the console to make debugging the canvas a little less dramatic.
 
 ![Images.. in the console?](http://i.imgur.com/hv6pwkb.png)
 
