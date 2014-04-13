@@ -1,6 +1,6 @@
 /**
  * Dubiously created by Adrian Cooney
- * http://dunxrion.github.io
+ * http://adriancooney.github.io
  */
 (function(console) {
 	"use strict";
