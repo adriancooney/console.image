@@ -1,0 +1,10 @@
+{
+  "name": "console.image",
+  "version": "0.1.0",
+  "main": "console.image.js",
+  "description": "The one thing Chrome Dev Tools didn't need.",
+  "license": "WTFPL",
+  "ignore": [
+    "index.html"
+  ]
+}
