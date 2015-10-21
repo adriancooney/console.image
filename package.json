@@ -1,0 +1,19 @@
+{
+  "name": "console.image",
+  "version": "1.0.0",
+  "description": "The one thing Chrome Dev Tools didn't need.",
+  "main": "console.image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adriancooney/console.image.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/adriancooney/console.image/issues"
+  },
+  "homepage": "https://github.com/adriancooney/console.image#readme"
+}
