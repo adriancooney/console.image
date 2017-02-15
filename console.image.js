@@ -103,6 +103,27 @@
 		return output;
 	}
 
+	function memeFunction(image) {
+		return function (upper, lower, width, height) {
+			return console.meme(upper, lower, image, width, height);
+		};
+	}
+
+	function simpleMemeName(name) {
+		// Special cases
+		if (name.startsWith('10 ')) {
+			name = 'Ten ' + name.substring(3);
+		} else if (name.startsWith('3rd ')) {
+			name = 'Third ' + name.substring(4);
+		} else if (name.startsWith('90\'s ')) {
+			name = 'Nineties ' + name.substring(5);
+		}
+
+		return name.toLowerCase()
+			.replace(/[',()?]/g, '') // Remove extraneous characters
+			.replace(/[ -]./g, match => match[1].toUpperCase()); // Remove spaces and dashes and capitalize
+	}
+
 	/**
 	 * Add a meme to the console!
 	 *
@@ -151,6 +172,10 @@
 
 		img.src = url; //"http://www.corsproxy.com/" + url.replace(/https?:\/\//, "");
 	};
+
+	for (var meme in memes) {
+		console.meme[simpleMemeName(meme)] = memeFunction(memes[meme]);
+	}
 
 	/**
 	 * Display an image in the console.
