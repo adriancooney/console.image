@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/SOKHUONG/console.image.git"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "keywords": [
     "console",
     "console.image",
