@@ -1,0 +1,24 @@
+{
+  "name": "console.image",
+  "version": "1.0.0",
+  "description": "print images and meme in console",
+  "main": "console.image.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOKHUONG/console.image.git"
+  },
+  "keywords": [
+    "console",
+    "console.image",
+    "console.meme"
+  ],
+  "author": "sokhuong",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/SOKHUONG/console.image/issues"
+  },
+  "homepage": "https://github.com/SOKHUONG/console.image#readme"
+}
