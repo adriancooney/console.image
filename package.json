@@ -1,5 +1,5 @@
 {
-  "name": "console.image",
+  "name": "console-art",
   "version": "1.0.0",
   "description": "print images and meme in console",
   "main": "console.image.js",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/SOKHUONG/console.image/issues"
   },
-  "homepage": "https://github.com/SOKHUONG/console.image#readme"
+  "homepage": "https://github.com/SOKHUONG/console.image#readme",
+  "ignore": [
+    "index.html"
+  ]
 }
